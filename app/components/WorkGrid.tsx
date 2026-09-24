@@ -50,7 +50,7 @@ export default function WorkGrid({ cards }: { cards: Card[] }) {
         className="filter-bar appear appeared"
         data-appear-delay="0.1"
       >
-        <span className="filter-label">Selected Work</span>
+        <span className="filter-label">Selected Works</span>
         <CategoryDropdown value={filter} onChange={setFilter} />
       </div>
 

@@ -83,9 +83,9 @@ export default function AboutPage() {
 
           <div className="about-contact">
             <a href="mailto:hello@wynaut.studio" className="about-cta">
-              Start a project
+              Contact Us
             </a>
-            <span className="about-location">Based in Paris &amp; New York</span>
+            <span className="about-location">Based in India</span>
           </div>
         </section>
       </main>
