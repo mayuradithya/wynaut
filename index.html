@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aerra - Portfolio Framer Template</title>
+    <meta name="description" content="Aerra is a refined portfolio template designed for photographers and videographers. It features a minimal, cinematic layout that highlights visual storytelling through timeless design and smooth transitions.">
+    <link rel="icon" href="images/5h9e7Taytle3NXPGO9tkfbLw4.webp">
+    <link rel="apple-touch-icon" href="images/S6x1mhtGpKg7VZKz002JslJ5Sc.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;1,300;1,400&family=Geist:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-inner">
+                <a href="./" class="logo" aria-label="Aerra home">
+                    <span class="rolling-text"><span class="rolling-text-word">Ærra</span><span class="rolling-text-word">Ærra</span></span><sup>®</sup>
+                </a>
+                <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Menu overlay -->
+        <div class="menu-overlay" aria-hidden="true">
+            <div class="menu-overlay-inner">
+                <div class="menu-profile">
+                    <div class="menu-avatar">
+                        <img src="images/SNfCmpGw6meXH1RKCMPMC9aTX5c.webp" alt="Amara" width="200" height="200">
+                    </div>
+                    <div class="menu-profile-info">
+                        <span class="menu-name">Amora Soris</span>
+                        <span class="menu-role">Photographer</span>
+                    </div>
+                    <div class="menu-socials">
+                        <a href="#" aria-label="Framer"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h5.5l-5.5 5.5v-5.5zM9.5 7h5.5v5.5h-5.5zM9.5 12.5l5.5 5.5v-5.5z"/></svg></a>
+                        <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20L10 12M4 4L13.5 17.5M13.5 4L20 11.5"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main class="main">
+            <div class="filter-bar appear" data-appear-delay="0.1">
+                <span class="filter-label">Selected Work</span>
+                <div class="category-dropdown">
+                    <button class="category-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span>Choose Category</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <ul class="category-list" role="listbox" aria-hidden="true">
+                        <li role="option" data-filter="all">All</li>
+                        <li role="option" data-filter="video">Video</li>
+                        <li role="option" data-filter="image">Image</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid" id="work-grid"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer appear" data-appear-delay="0.7">
+            <div class="footer-card">
+                <div class="footer-profile">
+                    <div class="footer-avatar">
+                        <img src="images/RktLbBsImMytyttC53QUluhd3C8.webp" alt="Gola Templates" width="120" height="120">
+                    </div>
+                    <div class="footer-profile-info">
+                        <span class="footer-name">Aera Soris</span>
+                        <span class="footer-role">Photographer</span>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Framer"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h5.5l-5.5 5.5v-5.5zM9.5 7h5.5v5.5h-5.5zM9.5 12.5l5.5 5.5v-5.5z"/></svg></a>
+                        <a href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20L10 12M4 4L13.5 17.5M13.5 4L20 11.5"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h6>Pages</h6>
+                        <ul>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="./about">About</a></li>
+                            <li><a href="./contact">Contact</a></li>
+                            <li><a href="./work">Work</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h6>CMS</h6>
+                        <ul>
+                            <li><a href="./work/work-single">Work Single</a></li>
+                            <li><a href="./work/category/green">Work Category</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h6>Utility Pages</h6>
+                        <ul>
+                            <li><a href="./404">404</a></li>
+                            <li><a href="./terms">Terms</a></li>
+                            <li><a href="./licensing">Licensing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© Crafted by Gola Templates</span>
+            </div>
+        </footer>
+
+        <!-- Fixed CTAs -->
+        <div class="fixed-ctas appear" data-appear-delay="1.2">
+            <a href="#" class="cta-pill">More Templates</a>
+            <a href="#" class="cta-pill cta-primary">Use for Free</a>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
