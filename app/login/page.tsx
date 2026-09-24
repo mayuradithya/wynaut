@@ -1,22 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Header from "../components/Header";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setMessage(null);
-    // Simulate authentication delay
-    await new Promise((resolve) => setTimeout(resolve, 1200));
+    setError(null);
+    await new Promise((resolve) => setTimeout(resolve, 800));
     setLoading(false);
-    setMessage("Access request sent.");
+
+    if (username.trim() === "client" && password === "client") {
+      router.push("/dashboard");
+    } else {
+      setError("Invalid credentials. Try client / client.");
+    }
   }
 
   return (
@@ -29,22 +35,22 @@ export default function LoginPage() {
             <span className="login-label">Client Access</span>
             <h1 className="login-title">Sign In</h1>
             <p className="login-subtitle">
-              Enter your credentials to view private galleries and project
-              timelines.
+              Enter your credentials to view project blueprints and
+              deliverables.
             </p>
           </div>
 
           <form className="login-form" onSubmit={handleSubmit}>
             <div className="login-field">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="username">Username</label>
               <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@studio.com"
+                id="username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="client"
                 required
-                autoComplete="email"
+                autoComplete="username"
               />
             </div>
 
@@ -64,12 +70,12 @@ export default function LoginPage() {
             <button
               type="submit"
               className="login-submit"
-              disabled={loading || !email || !password}
+              disabled={loading || !username || !password}
             >
               {loading ? "Please wait…" : "Continue"}
             </button>
 
-            {message && <span className="login-message">{message}</span>}
+            {error && <span className="login-message login-error">{error}</span>}
           </form>
 
           <a href="/" className="login-back">
